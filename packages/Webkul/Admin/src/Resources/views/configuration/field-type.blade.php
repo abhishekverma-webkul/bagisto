@@ -177,11 +177,11 @@
                     :rules="validations"
                     :value="savedSelections"
                     :label="label"
-                    multiple
                 >
                     <select
                         :name="`${name}[]`"
                         v-bind="data.field"
+                        v-model="data.value"
                         :class="[data.errors.length ? 'border border-red-500' : '']"
                         class="custom-select w-full rounded-md border bg-white px-3 py-2.5 text-sm font-normal text-gray-600 transition-all hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400"
                         multiple
